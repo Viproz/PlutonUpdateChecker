@@ -32,10 +32,21 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="Mono.Cecil">
+      <HintPath>ref\Mono.Cecil.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="ServerTester.cs" />
+    <Compile Include="Util.cs" />
+    <Compile Include="UpdateChecker\FieldDefinitionExtensions.cs" />
+    <Compile Include="UpdateChecker\MethodDefinitionExtensions.cs" />
+    <Compile Include="UpdateChecker\TypeDefinitionExtensions.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="UpdateChecker\" />
+  </ItemGroup>
 </Project>
