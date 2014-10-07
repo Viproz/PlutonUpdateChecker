@@ -23,7 +23,6 @@ IfExist, %1%
 	{
 		;TrayTip, PlutonInstaller %version%, Directory is not a valid RUST folder. Exiting...
 		FileAppend, Directory is not a valid RUST folder. Exiting...`n, %directory%\PlutonInstallerLog.txt
-		Sleep, 2000
 		ExitApp
 	}
 	vtodl = %2%
@@ -52,7 +51,7 @@ IfExist, %1%
 		FileRemoveDir, %directory%\Temp, 1
 		FileAppend, Running Patcher....`n, %directory%\PlutonInstallerLog.txt
 		;TrayTip, PlutonInstaller %version%, Running patcher!, 3
-		Run, %directory%\RustDedicated_Data\Managed\Pluton.Patcher.exe "--no-input",, 
+		Run, Pluton.Patcher.exe "--no-input", %directory%\RustDedicated_Data\Managed
 		; Be sure to check the patcher's return later here
 		Sleep, 500
 		FileAppend, Patching Complete!`n, %directory%\PlutonInstallerLog.txt
@@ -77,7 +76,6 @@ else
 {
 	;TrayTip, PlutonInstaller %version%, Invalid Directory. Exiting...
 	FileAppend, Invalid Directory. Exiting...`n, %directory%\PlutonInstallerLog.txt
-	Sleep, 2000
 	ExitApp
 }
 
