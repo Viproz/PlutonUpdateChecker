@@ -1,7 +1,7 @@
 /*
  * Pluton Project
  * GSP Installer by DreTaX
- * How to run the program in cmd, on in bat: PlutonInstaller.exe PATH stable/latest
+ * How to run the program in cmd, or in bat: PlutonInstaller.exe PATH stable/latest
  * Example: (Watch the quotes " position) PlutonInstaller.exe "d:\Program Files (x86)\RustServer_1 " stable
  */
 ;#SingleInstance force
