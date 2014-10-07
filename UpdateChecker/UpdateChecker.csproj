@@ -3,12 +3,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProductVersion>10.0.0</ProductVersion>
+    <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{8BB07881-0C07-4994-9F0B-3845CE8830FA}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>UpdateChecker</RootNamespace>
     <AssemblyName>UpdateChecker</AssemblyName>
+    <UseMSBuildEngine>False</UseMSBuildEngine>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <DebugSymbols>true</DebugSymbols>
@@ -35,6 +37,9 @@
     <Reference Include="Mono.Cecil">
       <HintPath>ref\Mono.Cecil.dll</HintPath>
     </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>ref\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
@@ -44,6 +49,7 @@
     <Compile Include="UpdateChecker\FieldDefinitionExtensions.cs" />
     <Compile Include="UpdateChecker\MethodDefinitionExtensions.cs" />
     <Compile Include="UpdateChecker\TypeDefinitionExtensions.cs" />
+    <Compile Include="ExtractRelease.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
