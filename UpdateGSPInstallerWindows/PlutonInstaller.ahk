@@ -5,6 +5,7 @@
  * Example: (Watch the quotes " position) PlutonInstaller.exe "d:\Program Files (x86)\RustServer_1 " stable
  */
 ;#SingleInstance force
+#NoTrayIcon
 Menu, Tray, Default,
 Menu, Tray, NoStandard
 version = V1.0 By DreTaX 
