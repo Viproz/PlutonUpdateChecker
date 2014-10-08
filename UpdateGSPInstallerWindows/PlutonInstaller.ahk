@@ -97,7 +97,7 @@ Unz(sZip, sUnz)
     Loop {
         sleep 50
         unzippedItems := psh.Namespace( sUnz ).items().count
-        ToolTip Unzipping in progress..
+        ;ToolTip Unzipping in progress..
         IfEqual,zippedItems,%unzippedItems%
             break
     }
